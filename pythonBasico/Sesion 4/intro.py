@@ -105,7 +105,7 @@ def lista(contacto):
     cargos=['Analista','Programador','Albañil','Contador','Administrador']
     sueldo=[6500,7600,8900,4500,6500,900]
     try:
-        posicion=contactos.index(contactos)
+        posicion=contactos.index(contacto)
     except:
         posicion=-1
     if posicion==-1:
