@@ -3,8 +3,6 @@ Metodos => procedimiento accion
 
 Funcion => retorna 
 """
-from cgi import print_arguments
-from xml.dom.pulldom import PROCESSING_INSTRUCTION
 
 
 def problema1(x0,y0,x1,y1,x):
@@ -235,3 +233,87 @@ print("Seno :",math.sin(0))
 print("CoSeno :",math.cos(0))
 print("Tanngente :",math.tan(0))
 print("Valor PI :",math.pi)
+
+import random
+print('Numero al azar de 0 - 1: ',random.random())
+print('Random de 20 a 50:  ',int((50-20)*random.random()+20))
+print('Random de 20 a 50:  ',random.randint(20,50))
+print('Random de 20 a 50:  ',random.randint(-20,50))
+
+print('Random decimal :',random.uniform(-10,20))
+print('Random decimal :',random.uniform(-10.5,20.6))
+
+print('Elegir de lista de elemento al azar: ',
+        random.choice(['juan','jose','luis','carlos','maria']))
+
+lista=['juan','jose','luis','carlos','maria']
+random.shuffle(lista)
+print('Imprimir lista en desorden: ',lista)
+
+print('------------------------------------------')
+
+print('Extrae numeros de elementos al azar de la lista: ',random.sample(lista,1))
+print('Extrae numeros de elementos al azar de la lista: ',random.sample(lista,2))
+print('Extrae numeros de elementos al azar de la lista: ',random.sample(lista,3))
+
+"""
+Caso: ingresa n jugadas de un tragamonedas, las figuras son triangulo, cuadrado y circulo
+indicar las jugadas ganadoras o perdidas
+indicar cuantos gano y perdio
+"""
+
+import random
+
+lista=['📐','⏹️','👁️']
+def problema9(jugadas):
+    ganadas=0
+    for x in range(1,jugadas+1):
+        num1=random.sample(lista)
+        num2=random.sample(lista)
+        num3=random.sample(lista)
+        if num1==num2 and num2==num3:
+            ganadas+=1
+            print(f'Jugada {x} = ({num1} - {num2} - {num3}) ====> GANO')
+        else:
+            print(f'Jugada {x} = ({num1} - {num2} - {num3}) ====> PERDIO')
+    print(f'\n Jugadas {ganadas} ganadas')
+    print(f'\n Jugadas {jugadas-ganadas} perdidas')
+
+problema9(15)
+
+
+"""
+funciones fecha
+"""
+
+from datetime import date
+
+fecha=date(2022,1,12)
+print('Fecha es: ',fecha)
+print('Fecha actual es: ',date.today())
+
+fecha=date.today()
+print('Año: ',fecha.year)
+print('Mes: ',fecha.month)
+print('Dia: ',fecha.day)
+
+from datetime import time
+tiempo=time(20,38,40)
+print('Tiempo: ',tiempo)
+print('Hora: ',tiempo.hour)
+print('Minuto: ',tiempo.minute)
+print('Segundo: ',tiempo.second)
+
+tiempo=time()
+print('Hora actual: ',tiempo)
+
+from datetime import datetime
+fechahora=datetime.now()
+print('Fecha y hora actuales: ',fechahora)
+
+from datetime import datetime
+tiempo=datetime.now()
+print('Tiempo: ',tiempo)
+print('Hora: ',tiempo.hour)
+print('Minuto: ',tiempo.minute)
+print('Segundo: ',tiempo.second)
