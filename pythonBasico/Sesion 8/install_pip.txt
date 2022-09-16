@@ -1,0 +1,10 @@
+****Generar entorno virtual antes de seguir
+    python -m venv (nombre de tu entorno)
+
+****Instalaciones necesarias
+
+    pip install --upgrade --user pyqtwebengine==5.12.1
+
+    pip install --upgrade --user pyqt5==5.12.3
+
+    pip install pyinstaller
