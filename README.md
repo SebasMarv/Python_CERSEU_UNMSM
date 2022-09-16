@@ -1,6 +1,7 @@
 Clases de python en UNMSM (CERSEU FACULTAD DE INGENIERIA DE SISTEMAS)
 
 ----------------->>|MÓDULO BÁSICO|<<----------------->
+
     *Tipos básicos de datos 📌
     *Operaciones comunes 📌
     *Estructura de datos 📌
