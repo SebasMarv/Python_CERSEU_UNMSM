@@ -96,22 +96,24 @@ class docentes(empleado):
       print("Valor ingreso no valido")
     print("La asignacion familiar es: ",empleado.asigFamiliar(self),"\nPago por dia: ",totolDocent,"\nHoras trabajadas: ",self.horas,"\nSueldo mensual: ",totolDocent*20,"\nSueldo final: ",(totolDocent*20)+empleado.asigFamiliar(self))
 
-
+print("---------------Administrativo---------------")
 #Administrativo
 valorAdmin=administrativo("Sebastian Marquez", 1, "A","ONP")
 valorAdmin.Catego()
 
-print("---------------------------------")
+print("--------------------------------------------")
+print("---------------Ventas---------------")
 #Ventas
 valorVentas=ventas("Sebastian Marquez", 6, "Externo",600)
 
 valorVentas.Tipo()
 
-print("---------------------------------")
+print("------------------------------------")
+print("---------------Docentes---------------")
 #Docentes
 
 valorDocentes=docentes("Sebastian Marquez", 0, "Tecnico",8)
 
 valorDocentes.Nivel()
 
-print("---------------------------------")
+print("--------------------------------------")
