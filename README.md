@@ -32,12 +32,12 @@ Clases de python en UNMSM (CERSEU FACULTAD DE INGENIERIA DE SISTEMAS)
     *Entorno virtual en Python📌
     *Herencia📌
 
-    *Realizar operaciones usando tipos de datos y operadores
-    *Controlar flujo de decisiones y bucles
-    *Realizar operaciones de entrada y salida
-    *Documentar y estrucuturar código
-    *Realizar operaciones usando módulos y herramientas
-    *Realizar resolución de problemas y gestión de errores
+    *Realizar operaciones usando tipos de datos y operadores📌
+    *Controlar flujo de decisiones y bucles📌
+    *Realizar operaciones de entrada y salida📌
+    *Documentar y estrucuturar código📌
+    *Realizar operaciones usando módulos y herramientas📌
+    *Realizar resolución de problemas y gestión de errores📌
 
 ----------------->>|MÓDULO INTERMEDIO|<<----------------->
 

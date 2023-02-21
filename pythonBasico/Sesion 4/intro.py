@@ -158,6 +158,10 @@ diccionario.values()#mostrar los valores
 diccionario['JuanJose']
 diccionario.get('JuanJose')
 
+#Añadir elementos a diccionario
+diccionario['Sebastian']=6300
+print(diccionario)
+
 #CAmbiar el valor de una llave
 diccionario['Nancy']=10000
 diccionario.get('Nancy')
