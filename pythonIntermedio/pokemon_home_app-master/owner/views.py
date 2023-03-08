@@ -166,7 +166,7 @@ def owner_delete(request, id_owner):
     owner = Owner.objects.get(id=id_owner)
     owner.delete()
 
-    return redirect('owner_list')
+    return redirect('owner_detail')
 
 
 def owner_edit(request, id_owner):
