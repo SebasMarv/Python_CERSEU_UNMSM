@@ -13,9 +13,14 @@ App Pokemon - Gestor de Owners
 Nota: Se trabajará con el nombre del proyecto para ejecutar los comandos
 ```
 
-### Crear un entorno virtual e instalar los requerimientos del proyecto
+### Crear un entorno virtual
 ```
-pip install -r requeriments.txt
+python -m venv nombre-entorno
+```
+
+### Instalar los requerimientos del proyecto
+```
+pip install -r requerments.txt
 ```
 
 ### Crear las tablas en nuestra BD para las apps

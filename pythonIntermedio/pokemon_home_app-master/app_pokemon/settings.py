@@ -73,12 +73,25 @@ WSGI_APPLICATION = 'app_pokemon.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/dev/ref/settings/#databases
 
+# Base de datos CASA
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'db_pokemon_app_Sebastian',
+#         'USER': 'postgres',
+#         'PASSWORD': '062699',
+#         'HOST': 'localhost',
+#         'PORT': '5432'
+#     }
+# }
+
+# Base de datos Trabajo
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'db_pokemon_app_Sebastian',
-        'USER': 'postgres',
-        'PASSWORD': '062699',
+        'USER': 'openpg',
+        'PASSWORD': 'openpgpwd',
         'HOST': 'localhost',
         'PORT': '5432'
     }

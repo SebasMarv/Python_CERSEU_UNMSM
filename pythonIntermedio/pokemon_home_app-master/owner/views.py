@@ -90,7 +90,7 @@ def list_owner(request):
     #owners = Owner.objects.filter(nombre="Juliana").order_by("-edad")
 
     """Acortar datos: Obtener un rango de registro de una talba en la BD"""
-    owners = Owner.objects.all()[0:5]
+    owners = Owner.objects.all()
 
     """Eliminando un conjunto de datos es específico"""
     #owners = Owner.objects.filter(id=3)
@@ -111,8 +111,8 @@ def list_owner(request):
     #query = Q(pais__startswith='Pe') & ~Q(edad=23)
     #owners = Owner.objects.filter(query, edad=17)
 
-    query = Q(pais__startswith='Pe') | Q(pais__startswith='Col')
-    owners = Owner.objects.filter(query, edad=17)
+    # query = Q(pais__startswith='Pe') | Q(pais__startswith='Col')
+    # owners = Owner.objects.filter(query, edad=17)
 
     """Error de consulta con Q, no es válido"""
     #query = Q(pais__startswith='Pe') | Q(pais__startswith='Col')
