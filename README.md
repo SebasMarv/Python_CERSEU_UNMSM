@@ -1,6 +1,6 @@
 Clases de python en UNMSM (CERSEU FACULTAD DE INGENIERIA DE SISTEMAS)
 
------------------>>|MÓDULO BÁSICO|<<----------------->
+## MÓDULO BÁSICO
 
     *Tipos básicos de datos 📌
     *Operaciones comunes 📌
@@ -39,6 +39,33 @@ Clases de python en UNMSM (CERSEU FACULTAD DE INGENIERIA DE SISTEMAS)
     *Realizar operaciones usando módulos y herramientas📌
     *Realizar resolución de problemas y gestión de errores📌
 
------------------>>|MÓDULO INTERMEDIO|<<----------------->
+## MÓDULO INTERMEDIO
 
-|PROXIMO|
+	*PEP8 en la práctica📌
+	*Acceso a la base de datos (SQLite, SQLserver, PostgreSQL)📌
+	*Consumo de Servicios Web📌
+	*Introducción a Django📌
+	
+	*Modelos, Shell y API Queryset📌
+	*Vistas y plantillas📌
+	*Django Admin📌
+	*Usuario y login con Facebook📌
+	
+	*Formularios y Vistas avanzadas📌
+	*Modelos y ORM avanzado📌
+	*Integración con múltiples base de datos📌
+	*Manejo de imágenes en Django📌
+	
+	*Integrando con Django Rest Framework (DRF)📌
+	*Documenta y organiza una API📌
+	*Consumir API con request📌
+	*Autenticación y JWT📌
+	*Seguridad de API📌
+	
+	*Cache de vistas y template📌
+	*Cache de serialización en DRF📌
+	*Integrar Mongo DB en DRF📌
+
+## MÓDULO INTERMEDIO
+
+### |PROXIMAMENTE|
