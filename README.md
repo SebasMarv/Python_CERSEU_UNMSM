@@ -1,6 +1,9 @@
-Clases de python en UNMSM (CERSEU FACULTAD DE INGENIERIA DE SISTEMAS)
+<img style="width: 11em " src="img/logo-cerseu.png" alt="CERSEU - INGENIERÍA DE SISTEMAS E INFORMÁTICA - UNMSM">
 
-## MÓDULO BÁSICO
+# Especializacion de Python - UNMSM
+>(CERSEU - INGENIERÍA DE SISTEMAS E INFORMÁTICA - UNMSM)
+
+### MÓDULO BÁSICO
 
     *Tipos básicos de datos 📌
     *Operaciones comunes 📌
@@ -39,7 +42,7 @@ Clases de python en UNMSM (CERSEU FACULTAD DE INGENIERIA DE SISTEMAS)
     *Realizar operaciones usando módulos y herramientas📌
     *Realizar resolución de problemas y gestión de errores📌
 
-## MÓDULO INTERMEDIO
+### MÓDULO INTERMEDIO
 
 	*PEP8 en la práctica📌
 	*Acceso a la base de datos (SQLite, SQLserver, PostgreSQL)📌
@@ -66,6 +69,6 @@ Clases de python en UNMSM (CERSEU FACULTAD DE INGENIERIA DE SISTEMAS)
 	*Cache de serialización en DRF📌
 	*Integrar Mongo DB en DRF📌
 
-## MÓDULO INTERMEDIO
+### MÓDULO INTERMEDIO
 
-### |PROXIMAMENTE|
+#### |PROXIMAMENTE|
