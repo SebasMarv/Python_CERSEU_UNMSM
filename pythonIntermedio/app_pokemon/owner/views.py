@@ -2,6 +2,9 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 # Create your views here.
 from django.urls import reverse_lazy
+from rest_framework import status
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
 
 from owner.forms import OwnerForm
 from owner.models import Owner
@@ -9,6 +12,11 @@ from owner.models import Owner
 from django.db.models import F, Q
 
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView
+
+from django.core import serializers as ssr
+
+from owner.serializers import OwnerSerializer
+
 
 def list_owner(request):
 
@@ -90,7 +98,7 @@ def list_owner(request):
     #owners = Owner.objects.filter(nombre="Juliana").order_by("-edad")
 
     """Acortar datos: Obtener un rango de registro de una talba en la BD"""
-    owners = Owner.objects.all()
+    owners = Owner.objects.all()[0:5]
 
     """Eliminando un conjunto de datos es específico"""
     #owners = Owner.objects.filter(id=3)
@@ -111,8 +119,8 @@ def list_owner(request):
     #query = Q(pais__startswith='Pe') & ~Q(edad=23)
     #owners = Owner.objects.filter(query, edad=17)
 
-    # query = Q(pais__startswith='Pe') | Q(pais__startswith='Col')
-    # owners = Owner.objects.filter(query, edad=17)
+    query = Q(pais__startswith='Pe') | Q(pais__startswith='Col')
+    owners = Owner.objects.filter(query, edad=17)
 
     """Error de consulta con Q, no es válido"""
     #query = Q(pais__startswith='Pe') | Q(pais__startswith='Col')
@@ -166,7 +174,7 @@ def owner_delete(request, id_owner):
     owner = Owner.objects.get(id=id_owner)
     owner.delete()
 
-    return redirect('owner_detail')
+    return redirect('owner_list')
 
 
 def owner_edit(request, id_owner):
@@ -209,3 +217,51 @@ class OwnerDelete(DeleteView):
     model = Owner
     success_url = reverse_lazy('owner_list_vc')
     template_name = 'owner/owner_confirm_delete.html'
+
+
+"""Serializers"""
+
+
+def ListOwnerSerializer(request):
+    lista_owner = ssr.serialize('json', Owner.objects.all(), fields=['nombre', 'pais', 'edad', 'dni'])
+
+    return HttpResponse(lista_owner, content_type="application/json")
+
+
+@api_view(['GET', 'POST'])
+def owner_api_view(request):
+
+    if request.method == 'GET':
+        print("Ingresó a GET!!!")
+        queryset = Owner.objects.all() # Se obtiene todos los datos de la tabla Owner
+        serializers_class = OwnerSerializer(queryset, many=True)
+
+        return Response(serializers_class.data, status=status.HTTP_200_OK)
+    elif request.method == 'POST':
+        serializers_class = OwnerSerializer(data=request.data)
+        if serializers_class.is_valid():
+            serializers_class.save()
+            return Response(serializers_class.data, status=status.HTTP_201_CREATED)
+        return Response(serializers_class.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+@api_view(['GET', 'PUT', 'DELETE'])
+def owner_detail_view(request, pk):
+    owner = Owner.objects.filter(id=pk).first()
+
+    if owner:
+        if request.method == 'GET':
+            serializers_class = OwnerSerializer(owner)
+            return Response(serializers_class.data)
+
+        elif request.method == 'PUT':
+            serializers_class = OwnerSerializer(owner, data=request.data)
+
+            if serializers_class.is_valid():
+                serializers_class.save()
+                return Response(serializers_class.data)
+            return Response(serializers_class.errors, status=status.HTTP_400_BAD_REQUEST)
+
+        elif request.method == 'DELETE':
+            owner.delete()
+            return Response('Owner se ha eliminado correctamente de la BD', status=status.HTTP_200_OK)

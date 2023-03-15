@@ -19,12 +19,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/dev/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-2l=qj-hmxz$dkxg69&=(xc9!b7l#xusvcs-vuro9jj^@sv3$tg'
+SECRET_KEY = 'django-insecure-ai@t249egr*bydypt7zs^#hz-kdg$a^' \
+             '@ec9$uy+-26gpm=m6j_'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-# Permite dar acceso al aplicativo a ciertas Ips que nosotros escribimos
+# Permite dar acceso al aplicativo a ciertas IPs que nosotros escribímos
 ALLOWED_HOSTS = []
 
 # Application definition
@@ -37,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'owner.apps.OwnerConfig',
-    'pokemon.apps.PokemonConfig'
+    'pokemon.apps.PokemonConfig',
+    'rest_framework'
 ]
 
 MIDDLEWARE = [
@@ -76,10 +78,10 @@ WSGI_APPLICATION = 'app_pokemon.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'db_pokemon_app_Sebastian',
+        'NAME': 'db_pokemon_app_2',
         'USER': 'postgres',
-        'PASSWORD': '062699',
-        'HOST': 'localhost',
+        'PASSWORD': 'admin',
+        'HOST': 'localhost',  # '127.0.0.1'
         'PORT': '5432'
     }
 }
@@ -89,16 +91,20 @@ DATABASES = {
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+        'NAME': 'django.contrib.auth.password_validation.'
+                'UserAttributeSimilarityValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        'NAME': 'django.contrib.auth.password_validation.'
+                'MinimumLengthValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+        'NAME': 'django.contrib.auth.password_validation.'
+                'CommonPasswordValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+        'NAME': 'django.contrib.auth.password_validation.'
+                'NumericPasswordValidator',
     },
 ]
 
