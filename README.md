@@ -69,6 +69,6 @@
 	*Cache de serialización en DRF📌
 	*Integrar Mongo DB en DRF📌
 
-### MÓDULO INTERMEDIO
+### MÓDULO AVANZADO
 
 #### |PROXIMAMENTE|
